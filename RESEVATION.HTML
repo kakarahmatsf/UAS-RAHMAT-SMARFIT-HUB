@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation | SMARFIT HUB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+                url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .reservation-container {
+            background: rgba(20,20,20,0.95);
+            width: 100%;
+            max-width: 520px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0,255,153,0.25);
+        }
+
+        .reservation-container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .reservation-container span {
+            color: #00ff99;
+        }
+
+        .reservation-container p {
+            text-align: center;
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        form input,
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background: #2a2a2a;
+            color: #fff;
+        }
+
+        form textarea {
+            resize: none;
+            height: 90px;
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .row div {
+            flex: 1;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .checkbox input {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #00ff99;
+            color: #000;
+            font-weight: 600;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #00cc77;
+        }
+
+        .back {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back a {
+            color: #00ff99;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="reservation-container">
+    <h2>Class & Trial <span>Reservation</span></h2>
+    <p>Silakan isi form untuk reservasi kelas atau trial membership</p>
+
+    <form>
+        <!-- Nama -->
+        <label>Nama Lengkap</label>
+        <input type="text" placeholder="Masukkan nama lengkap" required>
+
+        <!-- Email -->
+        <label>Email</label>
+        <input type="email" placeholder="email@gmail.com" required>
+
+        <!-- Nomor HP -->
+        <label>Nomor HP</label>
+        <input type="tel" placeholder="08xxxxxxxxxx" required>
+
+        <!-- Tanggal & Jam -->
+        <div class="row">
+            <div>
+                <label>Tanggal Reservasi</label>
+                <input type="date" required>
+            </div>
+            <div>
+                <label>Jam</label>
+                <input type="time" required>
+            </div>
+        </div>
+
+        <!-- Program -->
+        <label>Jenis Program</label>
+        <select required>
+            <option value="">-- Pilih Program --</option>
+            <option>Trial Membership</option>
+            <option>Personal Training</option>
+            <option>Weight Training Class</option>
+            <option>Cardio Fitness Class</option>
+        </select>
+
+        <!-- Cabang -->
+        <label>Pilih Cabang</label>
+        <select required>
+            <option value="">-- Pilih Cabang --</option>
+            <option>Jakarta</option>
+            <option>Bandung</option>
+        </select>
+
+        <!-- Catatan -->
+        <label>Catatan Khusus</label>
+        <textarea placeholder="Contoh: pemula, jadwal pagi, dll"></textarea>
+
+        <!-- Checkbox -->
+        <div class="checkbox">
+            <input type="checkbox" required>
+            <label>Saya menyatakan data yang diisi sudah benar</label>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit">Kirim Reservasi</button>
+    </form>
+
+    <div class="back">
+        <a href="index.html">← Kembali ke Beranda</a>
+    </div>
+</div>
+
+</body>
+</html>
